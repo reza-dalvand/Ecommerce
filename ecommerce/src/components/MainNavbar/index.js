@@ -17,7 +17,11 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import { makeStyles } from "@mui/styles";
 import logo from "../../assets/images/logo.png";
 import { MailOutline } from "@mui/icons-material";
-import { Link } from "@mui/material";
+import DropDownNavbar from "../DropDown";
+
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { spacing } from "@mui/system";
+import { Button, OutlinedInput, TextField } from "@mui/material";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -62,6 +66,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const useStyles = makeStyles({
   mainContainer: {
     backgroundColor: "#fff !important",
+    textAlign: "center",
+    position: "relative",
   },
   searchInput: {
     display: "flex",
@@ -75,10 +81,29 @@ const useStyles = makeStyles({
   navbarLink: {
     display: "flex",
     justifyContent: "center",
+    alignItems: "center",
+    width: "20%",
   },
+  removeUnderLineLink: {
+    textDecoration: "none",
+    fontSize: "16px",
+    fontWeight: "bold",
+    marginLeft: 20,
+    color: "#000",
+  },
+  searchBox: {
+    display: "flex",
+    justifyContent: "left",
+    position: "absolute",
+    left: 20,
+    top: 70,
+  },
+  searchBoxInput: { height: 50 },
+  searchBoxButton: { marginRight: "5px !important", width: "30%", height: 50 },
 });
 
 export default function MainNavbar() {
+  const [showSearchBox, setShowSearchBox] = React.useState(false);
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -101,6 +126,10 @@ export default function MainNavbar() {
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
+  };
+
+  const showSearchBoxHandeler = () => {
+    setShowSearchBox(!showSearchBox);
   };
 
   const menuId = "primary-search-account-menu";
@@ -215,9 +244,44 @@ export default function MainNavbar() {
               inputProps={{ "aria-label": "search" }}
             />
           </Search> */}
-          <Box className={classes.navbarLink} sx={{ flexGrow: 1 }}></Box>
+          <Box sx={{ flexGrow: 1 }} className={classes.navbarLink}>
+            <Router>
+              <Routes>
+                <Route exact path="/" />
+              </Routes>
+            </Router>
+            <Router>
+              <Link
+                to="#"
+                underline="none"
+                className={classes.removeUnderLineLink}
+              >
+                خانه{" "}
+              </Link>
+            </Router>
+            <DropDownNavbar title={"محصولات"} />
+            <Router>
+              <Link
+                to="#"
+                underline="none"
+                className={classes.removeUnderLineLink}
+              >
+                وبلاگ
+              </Link>
+            </Router>
+            <Router>
+              <Link
+                to="#"
+                underline="none"
+                className={classes.removeUnderLineLink}
+              >
+                تماس با ما
+              </Link>
+            </Router>
+          </Box>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
+              onClick={() => showSearchBoxHandeler()}
               size="small"
               aria-label="show 4 new mails"
               color="inherit"
@@ -272,6 +336,21 @@ export default function MainNavbar() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
+      {showSearchBox && (
+        <Box className={classes.searchBox}>
+          <OutlinedInput
+            className={classes.searchBoxInput}
+            placeholder="دنبال چه چیزی هستید..."
+          />
+          <Button
+            // color="secondery"
+            className={classes.searchBoxButton}
+            variant="contained"
+          >
+            جستجو...
+          </Button>
+        </Box>
+      )}
     </Box>
   );
 }
