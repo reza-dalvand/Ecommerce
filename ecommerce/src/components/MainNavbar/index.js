@@ -21,7 +21,7 @@ import DropDownNavbar from "../DropDown";
 
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import { spacing } from "@mui/system";
-import { Button, OutlinedInput, TextField } from "@mui/material";
+import { Button, createTheme, OutlinedInput, TextField } from "@mui/material";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -62,13 +62,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
-
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   mainContainer: {
     backgroundColor: "#fff !important",
     textAlign: "center",
     position: "relative",
   },
+
   searchInput: {
     display: "flex",
     justifyContent: "end",
@@ -80,6 +80,10 @@ const useStyles = makeStyles({
   },
   navbarLink: {
     display: "flex",
+
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
     justifyContent: "center",
     alignItems: "center",
     width: "20%",
@@ -95,12 +99,12 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "left",
     position: "absolute",
-    left: 20,
+    left: 10,
     top: 70,
   },
-  searchBoxInput: { height: 50 },
-  searchBoxButton: { marginRight: "5px !important", width: "30%", height: 50 },
-});
+  searchBoxInput: { height: 40 },
+  searchBoxButton: { marginRight: "5px !important", width: "30%", height: 40 },
+}));
 
 export default function MainNavbar() {
   const [showSearchBox, setShowSearchBox] = React.useState(false);
