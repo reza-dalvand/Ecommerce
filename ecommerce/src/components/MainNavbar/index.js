@@ -78,6 +78,13 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
   },
+  boxBadgeIconSearch: {
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      display: "flex",
+      justifyContent: "end",
+    },
+  },
   navbarLink: {
     display: "flex",
 
@@ -283,17 +290,18 @@ export default function MainNavbar() {
               </Link>
             </Router>
           </Box>
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+          <Box className={classes.boxBadgeIconSearch}>
             <IconButton
               onClick={() => showSearchBoxHandeler()}
               size="small"
-              aria-label="show 4 new mails"
               color="inherit"
             >
               <Badge>
-                <SearchIcon className={classes.badgeIcon} />
+                <SearchIcon />
               </Badge>
             </IconButton>
+          </Box>
+          <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
               size="small"
               aria-label="show 4 new mails"
