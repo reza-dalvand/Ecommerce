@@ -9,7 +9,6 @@ import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
@@ -22,6 +21,7 @@ import DropDownNavbar from "../DropDown";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import { spacing } from "@mui/system";
 import { Button, createTheme, OutlinedInput, TextField } from "@mui/material";
+import TemporaryDrawer from "../HambergerMenu";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -227,15 +227,8 @@ export default function MainNavbar() {
             justifyContent: "space-between !important",
           }}
         >
-          {/* <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton> */}
+          <TemporaryDrawer className={classes.hambergerMenu} />
+
           {/* <Typography
             variant="h6"
             noWrap
