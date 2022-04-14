@@ -7,6 +7,7 @@ function App() {
   return (
     <section>
       <MainNavbar />
+      {console.log('test')}
     </section>
   );
 }
