@@ -7,14 +7,13 @@ import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
-import { makeStyles } from "@mui/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@mui/material/IconButton";
 import useStyles from "./style";
-
-
+import HomeIcon from "@mui/icons-material/Home";
+import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
+import WebhookIcon from "@mui/icons-material/Webhook";
+import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
     right: false,
@@ -39,27 +38,30 @@ export default function TemporaryDrawer() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+      
+      <List className={classes.itemInHamberMenu}>
+        {["خانه", "محصولات", "وبلاگ", "تماس با ما"].map((text, index) => (
           <ListItem button key={text}>
+            <ListItemText
+              // style={{ textAlign: "right" }}
+              className={classes.hamberMenuItem}
+              primary={text}
+            />
             <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              {index === 0 ? (
+                <HomeIcon />
+              ) : index === 1 ? (
+                <ProductionQuantityLimitsIcon />
+              ) : index === 2 ? (
+                <WebhookIcon />
+              ) : (
+                <AddIcCallIcon />
+              )}
             </ListItemIcon>
-            <ListItemText primary={text} />
           </ListItem>
         ))}
       </List>
       <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
     </Box>
   );
 
@@ -67,10 +69,6 @@ export default function TemporaryDrawer() {
     <div>
       {["right"].map((anchor) => (
         <React.Fragment key={"right"}>
-          {/* <Button
-            className={classes.hambergerMenu}
-            onClick={toggleDrawer("right", true)}
-          > */}
           <IconButton
             className={classes.hambergerMenu}
             onClick={toggleDrawer("right", true)}
@@ -82,7 +80,6 @@ export default function TemporaryDrawer() {
           >
             <MenuIcon />
           </IconButton>
-          {/* </Button> */}
           <Drawer
             anchor={anchor}
             open={state[anchor]}

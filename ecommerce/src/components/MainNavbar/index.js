@@ -63,7 +63,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-
 export default function MainNavbar() {
   const [showSearchBox, setShowSearchBox] = React.useState(false);
   const classes = useStyles();
@@ -179,26 +178,15 @@ export default function MainNavbar() {
           }}
         >
           <TemporaryDrawer className={classes.hambergerMenu} />
-
-          {/* <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block" } }}
-          >
-            MUI
-          </Typography> */}
-          <img src={logo} alt="logo" />
-          {/* <Search className={classes.searchInput}>
-            <SearchIconWrapper>
-              <SearchIcon className={classes.badgeIcon} />
-            </SearchIconWrapper>
-            <StyledInputBase
-              style={{ color: "black" }}
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search> */}
+          <Box
+            component="img"
+            sx={{
+              height: 27,
+              width: 100,
+            }}
+            alt="logo"
+            src={logo}
+          />
           <Box sx={{ flexGrow: 1 }} className={classes.navbarLink}>
             <Router>
               <Routes>
