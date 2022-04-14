@@ -17,7 +17,7 @@ import { makeStyles } from "@mui/styles";
 import logo from "../../assets/images/logo.png";
 import { MailOutline } from "@mui/icons-material";
 import DropDownNavbar from "../DropDown";
-
+import useStyles from "./style";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import { spacing } from "@mui/system";
 import { Button, createTheme, OutlinedInput, TextField } from "@mui/material";
@@ -62,56 +62,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
-const useStyles = makeStyles((theme) => ({
-  mainContainer: {
-    backgroundColor: "#fff !important",
-    textAlign: "center",
-    position: "relative",
-  },
 
-  searchInput: {
-    display: "flex",
-    justifyContent: "end",
-  },
-  badgeIcon: {
-    color: "#514d4d",
-    display: "flex",
-    justifyContent: "space-between",
-  },
-  boxBadgeIconSearch: {
-    [theme.breakpoints.down("md")]: {
-      width: "100%",
-      display: "flex",
-      justifyContent: "end",
-    },
-  },
-  navbarLink: {
-    display: "flex",
-
-    [theme.breakpoints.down("md")]: {
-      display: "none",
-    },
-    justifyContent: "center",
-    alignItems: "center",
-    width: "20%",
-  },
-  removeUnderLineLink: {
-    textDecoration: "none",
-    fontSize: "16px",
-    fontWeight: "bold",
-    marginLeft: 20,
-    color: "#000",
-  },
-  searchBox: {
-    display: "flex",
-    justifyContent: "left",
-    position: "absolute",
-    left: 10,
-    top: 70,
-  },
-  searchBoxInput: { height: 40 },
-  searchBoxButton: { marginRight: "5px !important", width: "30%", height: 40 },
-}));
 
 export default function MainNavbar() {
   const [showSearchBox, setShowSearchBox] = React.useState(false);

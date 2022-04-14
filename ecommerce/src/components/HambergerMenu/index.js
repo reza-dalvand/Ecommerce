@@ -12,17 +12,8 @@ import MailIcon from "@mui/icons-material/Mail";
 import { makeStyles } from "@mui/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@mui/material/IconButton";
+import useStyles from "./style";
 
-const useStyles = makeStyles((theme) => ({
-  hambergerMenu: {
-    display: "none !important",
-
-    [theme.breakpoints.down("md")]: {
-      display: "flex !important",
-      marginLeft: "5px !important",
-    },
-  },
-}));
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
