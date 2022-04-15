@@ -1,7 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
@@ -14,11 +13,15 @@ import HomeIcon from "@mui/icons-material/Home";
 import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
 import WebhookIcon from "@mui/icons-material/Webhook";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
+import MultipleSelectPlaceholder from "../../PlatForm/select/Select";
+
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
-    right: false,
+    left: false,
   });
   const classes = useStyles();
+  const languagesName = ["فارسی", "English", "Arabic"];
+  const unitMony = ["IRR", "USD"];
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -33,17 +36,16 @@ export default function TemporaryDrawer() {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 300 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      
       <List className={classes.itemInHamberMenu}>
         {["خانه", "محصولات", "وبلاگ", "تماس با ما"].map((text, index) => (
           <ListItem button key={text}>
             <ListItemText
-              // style={{ textAlign: "right" }}
+              // style={{ textAlign: "left" }}
               className={classes.hamberMenuItem}
               primary={text}
             />
@@ -62,16 +64,25 @@ export default function TemporaryDrawer() {
         ))}
       </List>
       <Divider />
+      <Box
+        sx={{ width: 300 }}
+      >
+        <MultipleSelectPlaceholder
+          names={languagesName}
+          title="انتخاب زبان : "
+        />
+        <MultipleSelectPlaceholder names={unitMony} title="واحد پول : " />
+      </Box>
     </Box>
   );
 
   return (
     <div>
-      {["right"].map((anchor) => (
-        <React.Fragment key={"right"}>
+      {["left"].map((anchor) => (
+        <React.Fragment key={"left"}>
           <IconButton
             className={classes.hambergerMenu}
-            onClick={toggleDrawer("right", true)}
+            onClick={toggleDrawer("left", true)}
             size="large"
             edge="start"
             color="inherit"

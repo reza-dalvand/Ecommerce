@@ -4,8 +4,6 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import { makeStyles } from "@mui/styles";
-import Box from "@mui/material/Box";
 
 import useStyles from "./style";
 
