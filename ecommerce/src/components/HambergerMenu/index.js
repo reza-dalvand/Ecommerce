@@ -50,12 +50,8 @@ export default function TemporaryDrawer() {
     >
       <List className={classes.itemInHamberMenu}>
         {["خانه", "محصولات", "وبلاگ", "تماس با ما"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemText
-              // style={{ textAlign: "left" }}
-              className={classes.hamberMenuItem}
-              primary={text}
-            />
+          <ListItem style={{ fontWeight: "700 !important" }} button key={text}>
+            <ListItemText className={classes.hamberMenuItem} primary={text} />
             <ListItemIcon>
               {index === 0 ? (
                 <HomeIcon />
@@ -78,7 +74,7 @@ export default function TemporaryDrawer() {
         />
         <MultipleSelectPlaceholder names={unitMony} title="واحد پول : " />
       </Box>
-      <Divider style={{ marginTop: 60 }} />
+      <Divider style={{ marginTop: 40 }} />
 
       <Box sx={{ width: "100%", direction: "rtl" }}>
         <Box className={classes.hamberMenuContact}>
@@ -87,7 +83,11 @@ export default function TemporaryDrawer() {
           </Typography>
 
           <Typography mt={2} mr={1}>
-            <Link href="#" underline="none">
+            <Link
+              className={classes.hamberMenuContactPhone}
+              href="#"
+              underline="none"
+            >
               (222) 2456 897
             </Link>
           </Typography>
@@ -98,43 +98,47 @@ export default function TemporaryDrawer() {
             <MailIcon />
           </Typography>
           <Typography mr={1}>
-            <Link href="#" underline="none">
+            <Link
+              className={classes.hamberMenuContactPhone}
+              href="#"
+              underline="none"
+            >
               rdalvand@yahoo.com
             </Link>
           </Typography>
         </Box>
         <Box
+          mt={3}
           className={classes.hamberMenuSocial}
           // style={{ justyficontant: "center" }}
-          mt={3}
         >
           <IconButton
             color="primary"
             aria-label="upload picture"
             component="span"
           >
-            <InstagramIcon />
+            <InstagramIcon className={classes.hamberMenuContactPhone} />
           </IconButton>
           <IconButton
             color="primary"
             aria-label="upload picture"
             component="span"
           >
-            <TwitterIcon />
+            <TwitterIcon className={classes.hamberMenuContactPhone} />
           </IconButton>
           <IconButton
             color="primary"
             aria-label="upload picture"
             component="span"
           >
-            <TelegramIcon />
+            <TelegramIcon className={classes.hamberMenuContactPhone} />
           </IconButton>
           <IconButton
             color="primary"
             aria-label="upload picture"
             component="span"
           >
-            <FacebookIcon />
+            <FacebookIcon className={classes.hamberMenuContactPhone} />
           </IconButton>
         </Box>
       </Box>

@@ -7,10 +7,12 @@ const useStyles = makeStyles((theme) => ({
     height: 100,
   },
   formControlTitle: { fontWeight: 500 },
-  menuItem: {
-    background: "#f1f1f1",
+  hamberMenuSelectItem: {
+    color: "black",
+
     "&:hover": {
-      background: "#f00",
+      backgroundColor: "#1976d2 !important",
+      color: "white !important",
     },
   },
 }));

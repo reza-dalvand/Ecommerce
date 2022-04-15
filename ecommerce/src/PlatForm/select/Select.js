@@ -48,7 +48,7 @@ export default function MultipleSelectPlaceholder({ names, title }) {
 
   return (
     <div className={classes.mainFormControl}>
-      <FormControl sx={{ m: 1, width: 250, mt: 3 }}>
+      <FormControl sx={{ m: 1, width: 250 }}>
         <p className={classes.formControlTitle}>{title} </p>
         <Select
           style={{ height: 40, display: "flex", justifyContent: "center" }}
@@ -74,6 +74,7 @@ export default function MultipleSelectPlaceholder({ names, title }) {
             <MenuItem
               key={name}
               value={name}
+              className={classes.hamberMenuSelectItem}
               style={getStyles(name, personName, theme)}
             >
               {name}
