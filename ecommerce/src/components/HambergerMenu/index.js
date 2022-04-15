@@ -14,7 +14,14 @@ import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantity
 import WebhookIcon from "@mui/icons-material/Webhook";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 import MultipleSelectPlaceholder from "../../PlatForm/select/Select";
-
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import MailIcon from "@mui/icons-material/Mail";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import { Typography } from "@mui/material";
+import Link from "@mui/material/Link";
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
     left: false,
@@ -64,14 +71,72 @@ export default function TemporaryDrawer() {
         ))}
       </List>
       <Divider />
-      <Box
-        sx={{ width: 300 }}
-      >
+      <Box sx={{ width: 300 }}>
         <MultipleSelectPlaceholder
           names={languagesName}
           title="انتخاب زبان : "
         />
         <MultipleSelectPlaceholder names={unitMony} title="واحد پول : " />
+      </Box>
+      <Divider style={{ marginTop: 60 }} />
+
+      <Box sx={{ width: "100%", direction: "rtl" }}>
+        <Box className={classes.hamberMenuContact}>
+          <Typography mt={2}>
+            <LocalPhoneIcon />
+          </Typography>
+
+          <Typography mt={2} mr={1}>
+            <Link href="#" underline="none">
+              (222) 2456 897
+            </Link>
+          </Typography>
+        </Box>
+
+        <Box className={classes.hamberMenuContact}>
+          <Typography>
+            <MailIcon />
+          </Typography>
+          <Typography mr={1}>
+            <Link href="#" underline="none">
+              rdalvand@yahoo.com
+            </Link>
+          </Typography>
+        </Box>
+        <Box
+          className={classes.hamberMenuSocial}
+          // style={{ justyficontant: "center" }}
+          mt={3}
+        >
+          <IconButton
+            color="primary"
+            aria-label="upload picture"
+            component="span"
+          >
+            <InstagramIcon />
+          </IconButton>
+          <IconButton
+            color="primary"
+            aria-label="upload picture"
+            component="span"
+          >
+            <TwitterIcon />
+          </IconButton>
+          <IconButton
+            color="primary"
+            aria-label="upload picture"
+            component="span"
+          >
+            <TelegramIcon />
+          </IconButton>
+          <IconButton
+            color="primary"
+            aria-label="upload picture"
+            component="span"
+          >
+            <FacebookIcon />
+          </IconButton>
+        </Box>
       </Box>
     </Box>
   );

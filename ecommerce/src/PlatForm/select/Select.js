@@ -24,6 +24,10 @@ function getStyles(name, personName, theme) {
       personName.indexOf(name) === -1
         ? theme.typography.fontWeightRegular
         : theme.typography.fontWeightMedium,
+    // backgroundColor: "#333",
+    // color: "white",
+    // border: "solid 1px white",
+    // backgroundColor: { "&:hover": "red" },
   };
 }
 
@@ -63,9 +67,9 @@ export default function MultipleSelectPlaceholder({ names, title }) {
           MenuProps={MenuProps}
           inputProps={{ "aria-label": "Without label" }}
         >
-          <MenuItem disabled value="">
+          {/* <MenuItem style={getStyles('', personName, theme)} disabled value="">
             <em>انتخاب کنید...</em>
-          </MenuItem>
+          </MenuItem> */}
           {names.map((name) => (
             <MenuItem
               key={name}

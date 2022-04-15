@@ -12,6 +12,18 @@ const useStyles = makeStyles((theme) => ({
   hamberMenuItem: {
     textAlign: "right !important",
   },
+  hamberMenuContact: {
+    display: "flex",
+    alignItems: "center",
+    width: "55%",
+    fontSize: 16,
+    marginLeft: 20,
+  },
+  hamberMenuSocial: {
+    display: "flex",
+    width: "100%",
+    justifyContent: "center !important",
+  },
 }));
 
 export default useStyles;
