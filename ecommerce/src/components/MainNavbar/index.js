@@ -18,7 +18,6 @@ import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import { Button, OutlinedInput } from "@mui/material";
 import TemporaryDrawer from "../HambergerMenu";
 
-
 export default function MainNavbar() {
   const [showSearchBox, setShowSearchBox] = React.useState(false);
   const classes = useStyles();
@@ -243,11 +242,11 @@ export default function MainNavbar() {
             placeholder="دنبال چه چیزی هستید..."
           />
           <Button
-            // color="secondery"
+            sx={{ mx: 1 }}
             className={classes.searchBoxButton}
             variant="contained"
           >
-            جستجو...
+            جستجو
           </Button>
         </Box>
       )}
