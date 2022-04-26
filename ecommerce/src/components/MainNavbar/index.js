@@ -14,7 +14,7 @@ import logo from "../../assets/images/logo.png";
 import { MailOutline } from "@mui/icons-material";
 import DropDownNavbar from "../DropDown";
 import useStyles from "./style";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button, OutlinedInput } from "@mui/material";
 import TemporaryDrawer from "../HambergerMenu";
 
@@ -143,39 +143,28 @@ export default function MainNavbar() {
             src={logo}
           />
           <Box sx={{ flexGrow: 1 }} className={classes.navbarLink}>
-            <Router>
-              <Routes>
-                <Route exact path="/" />
-              </Routes>
-            </Router>
-            <Router>
-              <Link
-                to="#"
-                underline="none"
-                className={classes.removeUnderLineLink}
-              >
-                خانه{" "}
-              </Link>
-            </Router>
+            <Link
+              to="#"
+              underline="none"
+              className={classes.removeUnderLineLink}
+            >
+              خانه{" "}
+            </Link>
             <DropDownNavbar title={"محصولات"} />
-            <Router>
-              <Link
-                to="#"
-                underline="none"
-                className={classes.removeUnderLineLink}
-              >
-                وبلاگ
-              </Link>
-            </Router>
-            <Router>
-              <Link
-                to="#"
-                underline="none"
-                className={classes.removeUnderLineLink}
-              >
-                تماس با ما
-              </Link>
-            </Router>
+            <Link
+              to="#"
+              underline="none"
+              className={classes.removeUnderLineLink}
+            >
+              وبلاگ
+            </Link>
+            <Link
+              to="#"
+              underline="none"
+              className={classes.removeUnderLineLink}
+            >
+              تماس با ما
+            </Link>
           </Box>
           <Box className={classes.boxBadgeIconSearch}>
             <IconButton

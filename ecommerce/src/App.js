@@ -1,14 +1,13 @@
-import "./App.css";
-import * as React from "react";
-import MainNavbar from "./components/MainNavbar";
-import Slider from "./PlatForm/slider";
-
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./layouts/Home";
 function App() {
   return (
-    <section>
-      <MainNavbar />
-      <Slider />
-    </section>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 

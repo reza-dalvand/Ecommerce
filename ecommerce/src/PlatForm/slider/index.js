@@ -9,25 +9,24 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
-
+import slider1 from "../../assets/images/imagesSlider/slider1.jpg";
+import slider2 from "../../assets/images/imagesSlider/slider2.jpg";
+import slider3 from "../../assets/images/imagesSlider/slider3.jpg";
+import slider4 from "../../assets/images/imagesSlider/slider4.jpg";
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
   {
-    imgPath:
-      "https://images.unsplash.com/photo-1554941068-d6fc6f388f72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    imgPath: slider1,
   },
   {
-    imgPath:
-      "https://images.unsplash.com/photo-1611348586840-ea9872d33411?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHNsaWRlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    imgPath: slider2,
   },
   {
-    imgPath:
-      "https://images.unsplash.com/photo-1598387180437-80388ae0df12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fHNsaWRlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    imgPath: slider3,
   },
   {
-    imgPath:
-      "https://images.unsplash.com/photo-1608009597797-13bc9b52cfb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHNsaWRlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    imgPath: slider4,
   },
 ];
 
@@ -89,9 +88,10 @@ class SwipeableTextMobileStepper extends React.Component {
           enableMouseEvents
         >
           {tutorialSteps.map((step, index) => (
-            <div key={step.label}>
+            <div key={index}>
               {Math.abs(activeStep - index) <= 2 ? (
                 <img
+                  key={index}
                   className={classes.img}
                   src={step.imgPath}
                   alt={step.label}
