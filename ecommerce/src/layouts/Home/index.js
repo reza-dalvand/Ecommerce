@@ -41,7 +41,31 @@ function Home() {
           <ProductCard />
           <ProductCard />
         </Carousel> */}
-        <ProductItem />
+        <Box sx={{ mt: 5 }} className={classes.containerProducts}>
+          <Typography
+            className={classes.productTitle}
+            sx={{ mr: 2 }}
+            variant="h6"
+          >
+            محصولات جدید
+          </Typography>
+          <Typography
+            className={classes.productTitle}
+            sx={{ mr: 2 }}
+            variant="h6"
+          >
+            بهترین محصولات{" "}
+          </Typography>
+          <Typography
+            className={classes.productTitle}
+            sx={{ mr: 2 }}
+            variant="h6"
+          >
+            {" "}
+            محصولات موجود
+          </Typography>
+        </Box>
+        {/* <ProductItem /> */}
       </Box>
     </Box>
   );
