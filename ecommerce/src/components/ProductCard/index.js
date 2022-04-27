@@ -18,7 +18,7 @@ function ProductCard() {
           <Box className={styles.contentBx}>
             <h2>کتونی نایک</h2>
 
-            <Box className={styles.size}>
+            {/* <Box className={styles.size}>
               <Typography variant="h3">اندازه: </Typography>
               <span>7</span>
               <span>8</span>
@@ -31,7 +31,7 @@ function ProductCard() {
               <span></span>
               <span></span>
               <span></span>
-            </Box>
+            </Box> */}
             <Link href="#">خرید کالا</Link>
           </Box>
         </Box>

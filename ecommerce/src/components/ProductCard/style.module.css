@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #131313;
+  background: #ffffff;
 }
 
 .container {
@@ -16,8 +16,8 @@
 
 .container .card {
   position: relative;
-  width: 320px;
-  height: 450px;
+  width: 280px;
+  height: 440px;
   background: #232323;
   border-radius: 20px;
   overflow: hidden;
