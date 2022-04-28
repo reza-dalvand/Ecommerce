@@ -51,7 +51,7 @@ const styles = (theme) => ({
   },
 });
 
-class SwipeableTextMobileStepper extends React.Component {
+class MainSlider extends React.Component {
   state = {
     activeStep: 0,
   };
@@ -138,11 +138,9 @@ class SwipeableTextMobileStepper extends React.Component {
     );
   }
 }
-SwipeableTextMobileStepper.propTypes = {
+MainSlider.propTypes = {
   classes: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(
-  SwipeableTextMobileStepper
-);
+export default withStyles(styles, { withTheme: true })(MainSlider);

@@ -9,6 +9,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "28px !important",
     textAlign: "center",
   },
+  category: { display: "flex", flexWrap: "wrap", justifyContent: "center" },
+
   productTitle: {
     cursor: "pointer !important",
     fontWeight: "600 !important",

@@ -6,8 +6,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   background: #ffffff;
+  margin: 1%;
 }
 
 .container {
@@ -196,4 +196,16 @@
   opacity: 1;
   transform: translateY(0px);
   transition-delay: 0.7s;
+}
+
+@media screen and (max-width: 7680px), (min-width: 7680px) {
+  .container .card {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container .card {
+    width: 350px;
+  }
 }
