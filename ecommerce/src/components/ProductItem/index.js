@@ -96,9 +96,7 @@ const ProductItem = () => {
               </Typography>
             </Box>
             <Box className="last_section">
-              <button sx={{ ml: 1 }} onClick={AddCart}>
-                خرید کالا
-              </button>
+              <button sx={{ ml: 1 }}>خرید کالا</button>
             </Box>
           </Box>
         </Box>

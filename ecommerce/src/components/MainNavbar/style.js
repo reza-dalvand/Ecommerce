@@ -2,7 +2,7 @@ import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    backgroundColor: "#fff !important",
+    backgroundColor: "#eceaea !important",
     textAlign: "center",
     position: "relative",
   },

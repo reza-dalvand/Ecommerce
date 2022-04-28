@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +7,13 @@
 h3 {
   color: #ead106;
 }
-
+.container {
+  width: 22%;
+  margin: 1%;
+  padding: 1%;
+}
 .card {
-  width: 33%;
+  width: 100%;
   background-color: #6c6868;
   border-radius: 12px;
   padding: 20px;
@@ -26,7 +28,7 @@ h3 {
 
 .image img {
   margin-bottom: 20px;
-  width: 250px;
+  width: 100%;
 }
 
 .rating_reviews {
@@ -200,4 +202,73 @@ h3 {
 .fa-heart {
   color: red;
   font-weight: 800;
+}
+
+@media screen and (max-width: 7680px), (min-width: 7680px) {
+  .container {
+    width: 19%;
+    margin: 1%;
+    padding: 1%;
+  }
+}
+
+/* size of UHD */
+
+/* all sizes * 2 برااساس درصد افزایش پیدا کنه */
+
+@media screen and (max-width: 3840px) {
+  .container {
+    width: 19%;
+    margin: 1%;
+    padding: 1%;
+  }
+}
+
+/* size of FULL HD*/
+
+@media screen and (max-width: 1920px) {
+  .container {
+    width: 19%;
+    margin: 1%;
+    padding: 1%;
+  }
+}
+
+/* size of Laptop HD */
+
+@media screen and (min-width: 1366.1px) {
+  .container {
+    width: 22%;
+    margin: 1%;
+    padding: 1%;
+  }
+}
+/* size of iPad Landscape */
+
+@media screen and (min-width: 1112px) {
+  .container {
+    width: 22%;
+    margin: 1%;
+    padding: 1%;
+  }
+}
+
+/* size of iPad Portrait */
+
+@media screen and (max-width: 835px) {
+  .container {
+    width: 45%;
+    margin: 1%;
+    padding: 1%;
+  }
+}
+
+/* size of iPhone */
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 90%;
+    margin: 1%;
+    padding: 1%;
+  }
 }

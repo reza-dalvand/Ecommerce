@@ -2,7 +2,7 @@ import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
   dropDownNavbar: {
-    backgroundColor: "white !important",
+    backgroundColor: "#eceaea !important",
     boxShadow: "none !important",
     color: "#000 !important",
     fontSize: "21px !important",
