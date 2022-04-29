@@ -17,7 +17,11 @@ import useStyles from "./style";
 import { Link } from "react-router-dom";
 import { Button, OutlinedInput } from "@mui/material";
 import TemporaryDrawer from "../HambergerMenu";
-
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import LogoutIcon from "@mui/icons-material/Logout";
+import SettingsIcon from "@mui/icons-material/Settings";
+import LoginIcon from "@mui/icons-material/Login";
+import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 export default function MainNavbar() {
   const [showSearchBox, setShowSearchBox] = React.useState(false);
   const classes = useStyles();
@@ -51,6 +55,7 @@ export default function MainNavbar() {
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
+      sx={{ mt: 4 }}
       anchorEl={anchorEl}
       anchorOrigin={{
         vertical: "top",
@@ -65,8 +70,18 @@ export default function MainNavbar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        <AccountCircleIcon sx={{ mr: 1 }} />
+        حساب کاربری
+      </MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        <SettingsIcon sx={{ mr: 1 }} />
+        تنظیمات
+      </MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        <AppRegistrationIcon sx={{ mr: 2 }} />
+        ثبت نام / ورود
+      </MenuItem>
     </Menu>
   );
 
@@ -93,7 +108,7 @@ export default function MainNavbar() {
             <MailOutline />
           </Badge>
         </IconButton>
-        <p>Messages</p>
+        <p>پیغام ها</p>
       </MenuItem>
       <MenuItem>
         <IconButton
@@ -105,7 +120,7 @@ export default function MainNavbar() {
             <NotificationsNoneIcon />
           </Badge>
         </IconButton>
-        <p>Notifications</p>
+        <p>هشدار ها </p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -117,7 +132,7 @@ export default function MainNavbar() {
         >
           <AccountCircle />
         </IconButton>
-        <p>Profile</p>
+        <p>حساب کاربری</p>
       </MenuItem>
     </Menu>
   );

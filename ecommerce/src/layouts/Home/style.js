@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#464444",
     justifyContent: "center",
   },
-  slickCarousel: { width: "100%" },
+  slickCarousel: { width: "100%", cursor: "pointer" },
 }));
 
 export default useStyles;
