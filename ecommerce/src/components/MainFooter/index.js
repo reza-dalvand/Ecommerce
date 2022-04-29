@@ -1,75 +1,87 @@
-import { Box } from "@material-ui/core";
+import { Box, IconButton } from "@material-ui/core";
 import * as React from "react";
-
+import "./style.css";
+import FmdGoodIcon from "@mui/icons-material/FmdGood";
+import PhoneIcon from "@mui/icons-material/Phone";
+import EmailIcon from "@mui/icons-material/Email";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import GitHubIcon from "@mui/icons-material/GitHub";
 function MainFooter() {
   return (
-    <Box>
-      <Box>Footer Example 4</Box>
-      <Box classNAme="footer-distributed">
-        <Box classNAme="footer-left">
+    <Box className="containerFooter">
+      <Box className="footerDistributed">
+        <Box className="footerLeft">
           <h3>
-            Company<span>logo</span>
+            کیجسا<span>برند</span>
           </h3>
 
-          <p classNAme="footer-links">
-            <a href="#" classNAme="link-1">
-              Home
+          <p className="footerLinks">
+            <a href="#" className="link1">
+              خانه
             </a>
 
-            <a href="#">Blog</a>
+            <a href="#">وبلاگ</a>
 
-            <a href="#">Pricing</a>
+            <a href="#">قیمت ها</a>
 
-            <a href="#">About</a>
+            <a href="#">درباره ما</a>
 
-            <a href="#">Faq</a>
+            <a href="#">سوالات متداول</a>
 
-            <a href="#">Contact</a>
+            <a href="#">تماس با ما</a>
           </p>
 
-          <p classNAme="footer-company-name">Company Name © 2015</p>
+          <p className="footerCompanyName">کیجسا برند © 2022</p>
         </Box>
 
-        <Box classNAme="footer-center">
+        <Box className="footerCenter">
           <Box>
-            <i classNAme="fa fa-map-marker"></i>
+            <IconButton className="footerIcon">
+              <FmdGoodIcon />
+            </IconButton>
             <p>
-              <span>444 S. Cedros Ave</span> Solana Beach, California
+              <span>لرستان خرم آباد مطهری پلاک 444</span>
             </p>
           </Box>
 
           <Box>
-            <i classNAme="fa fa-phone"></i>
-            <p>+1.555.555.5555</p>
+            <IconButton className="footerIcon">
+              <PhoneIcon />
+            </IconButton>
+            <p>+98 990 941 2001</p>
           </Box>
 
           <Box>
-            <i classNAme="fa fa-envelope"></i>
+            <IconButton className="footerIcon">
+              <EmailIcon />
+            </IconButton>
             <p>
-              <a href="mailto:support@company.com">support@company.com</a>
+              <a href="rdalvand@yahoo.com">rdalvand@yahoo.com</a>
             </p>
           </Box>
         </Box>
 
-        <Box classNAme="footer-right">
-          <p classNAme="footer-company-about">
-            <span>About the company</span>
-            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
-            euismod convallis velit, eu auctor lacus vehicula sit amet.
+        <Box className="footerRight">
+          <p className="footerCompanyAbout">
+            <span>درباره شرکت ما</span>
+            ما یه شرکت نصب و پخش انواع قطعات آسانسور با بهترین کیفیت هستیم.
+            اعتماد شما سرمایه ماست.س
           </p>
 
-          <Box classNAme="footer-icons">
+          <Box className="footerIcons">
             <a href="#">
-              <i classNAme="fa fa-facebook"></i>
+              <FacebookIcon />
             </a>
             <a href="#">
-              <i classNAme="fa fa-twitter"></i>
+              <TwitterIcon />
             </a>
             <a href="#">
-              <i classNAme="fa fa-linkedin"></i>
+              <InstagramIcon />
             </a>
             <a href="#">
-              <i classNAme="fa fa-github"></i>
+              <GitHubIcon />
             </a>
           </Box>
         </Box>

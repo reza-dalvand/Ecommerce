@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import MainNavbar from "../../components/MainNavbar";
 import MainSlider from "../../PlatForm/slider";
 import ProductCard from "../../components/ProductCard";
-import { Box, Typography } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
 import useStyle from "./style";
 import "react-multi-carousel/lib/styles.css";
 import ProductItem from "../../components/ProductItem";
-
+import MainFooter from "../../components/MainFooter";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 function Home() {
   const classes = useStyle();
   const [showNewProdcuts, setShowNew] = useState(true);
@@ -65,6 +66,8 @@ function Home() {
             >
               بیشتر نمایش بده...
             </Typography>
+
+            <KeyboardArrowDownIcon style={{ color: "#f2ab05" }} />
           </Box>
         )}
 
@@ -78,9 +81,17 @@ function Home() {
             >
               بیشتر نمایش بده...
             </Typography>
+            <IconButton
+              color="secondary"
+              aria-label="upload picture"
+              component="span"
+            >
+              <KeyboardArrowDownIcon />
+            </IconButton>
           </Box>
         )}
       </Box>
+      <MainFooter />
     </Box>
   );
 }
