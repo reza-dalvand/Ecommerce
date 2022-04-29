@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#464444",
     justifyContent: "center",
   },
+  slickCarousel: { width: "100%" },
 }));
 
 export default useStyles;

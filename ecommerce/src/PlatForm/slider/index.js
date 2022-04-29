@@ -111,7 +111,7 @@ class MainSlider extends React.Component {
               onClick={this.handleNext}
               disabled={activeStep === maxSteps - 1}
             >
-              بعدی{" "}
+              بعدی
               {theme.direction === "rtl" ? (
                 <KeyboardArrowLeftIcon />
               ) : (
@@ -130,7 +130,7 @@ class MainSlider extends React.Component {
               ) : (
                 <KeyboardArrowLeftIcon />
               )}
-              قبلی{" "}
+              قبلی
             </Button>
           }
         />
