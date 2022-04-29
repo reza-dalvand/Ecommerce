@@ -9,10 +9,7 @@ const useStyles = makeStyles({
     // fontWeight: "bold !important",
     marginTop: "5px !important",
   },
-  dropDownNavbarItem: {
-    // fontSize: "15px !important",
-    // fontWeight: 400,
-  },
+  productMenuNavbar: { display: "flex" },
 });
 
 export default useStyles;

@@ -148,7 +148,7 @@ export default function MainNavbar() {
               underline="none"
               className={classes.removeUnderLineLink}
             >
-              خانه{" "}
+              خانه
             </Link>
             <DropDownNavbar title={"محصولات"} />
             <Link

@@ -146,7 +146,7 @@ function Home() {
               }}
               alt="head2"
               src={head2}
-            />{" "}
+            />
           </Box>
           <Box>
             <Box
@@ -179,7 +179,7 @@ function Home() {
               }}
               alt="head2"
               src={head6}
-            />{" "}
+            />
           </Box>
           <Box>
             <Box
@@ -190,7 +190,7 @@ function Home() {
               }}
               alt="head2"
               src={head7}
-            />{" "}
+            />
           </Box>
           <Box>
             <Box
@@ -201,7 +201,7 @@ function Home() {
               }}
               alt="head2"
               src={head8}
-            />{" "}
+            />
           </Box>
         </Slider>
       </Box>
