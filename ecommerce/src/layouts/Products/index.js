@@ -14,6 +14,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
+import BasicBreadcrumbs from "../../components/Breadcrumbs";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -28,6 +29,7 @@ function Products() {
   return (
     <Box>
       <MainNavbar />
+      <BasicBreadcrumbs />
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
           <Grid item xs={8}>
