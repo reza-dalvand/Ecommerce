@@ -39,13 +39,11 @@ function Products() {
     <Box>
       <MainNavbar />
       <BasicBreadcrumbs />
-      <Box sx={{ mx: 10 }}>
+      <Box sx={{ mx: 6 }}>
         <Grid className={classes.mainContainer} container spacing={3}>
-          <Grid item xs={3}>
-            <Box sx={{ mt: 2 }} className={classes.rightNavbarFilters}>
-              <SearchBoxForProducts
-                className={classes.searchBoxProductsFilter}
-              />
+          <Grid style={{ width: "100%" }} item xs={12} lg={3}>
+            <Box sx={{ mt: 3 }} className={classes.rightNavbarFilters}>
+              <SearchBoxForProducts />
             </Box>
             <Box className={classes.checkBoxFilters}>
               <Typography sx={{ ml: 1, mt: 3 }}>دسته بندی ها</Typography>
@@ -76,9 +74,21 @@ function Products() {
               <ProductTags />
               <ProductTags />
               <ProductTags />
+              <ProductTags />
+              <ProductTags />
+              <ProductTags />
+              <ProductTags />
+              <ProductTags />
+              <ProductTags />
+              <ProductTags />
+              <ProductTags />
+              <ProductTags />
+              <ProductTags />
+              <ProductTags />
+              <ProductTags />
             </Box>
           </Grid>
-          <Grid item xs={9}>
+          <Grid style={{ width: "100%" }} item xs={12} lg={9}>
             <Box sx={{ mt: 2 }} className={classes.leftNavbarFilters}>
               <Box className={classes.iconsFilter}>
                 <IconButton aria-label="upload picture" component="span">
@@ -88,9 +98,24 @@ function Products() {
                   <ViewListIcon />
                 </IconButton>
               </Box>
-              <Typography>نمایش 15 از 144 کالا</Typography>
+              <Typography className={classes.iconFilter}>
+                نمایش 15 از 144 کالا
+              </Typography>
               <CustomSelectBox />
             </Box>
+            <Grid item>
+              <Box sx={{ mt: 4, mb: 4 }} className={classes.productsMenu}>
+                <ProductItem />
+                <ProductItem />
+                <ProductItem />
+                <ProductItem />
+                <ProductItem />
+                <ProductItem />
+                <ProductItem />
+                <ProductItem />
+                <ProductItem />
+              </Box>
+            </Grid>
           </Grid>
         </Grid>
       </Box>

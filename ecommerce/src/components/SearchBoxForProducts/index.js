@@ -5,9 +5,9 @@ export default function SearchBoxForProducts() {
   const classes = useStyles();
 
   return (
-    <Box>
+    <Box style={{ width: "70%" }}>
       <Typography>جستجو</Typography>
-      <Box className={classes.searchBox}>
+      <Box sx={{ mt: 3 }} className={classes.searchBox}>
         <input
           sx={{ mt: 3 }}
           className={classes.inputBox}

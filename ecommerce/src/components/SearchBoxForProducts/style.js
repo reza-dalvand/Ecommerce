@@ -1,10 +1,10 @@
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
-  searchBox: { position: "relative", width: "80%", alignItems: "center" },
+  searchBox: { position: "relative", width: "100%", alignItems: "center" },
   inputBox: {
     display: "flex",
-    borderRadius: "3px",
+    borderRadius: "20px",
     height: 40,
     padding: 7,
     marginTop: "10px",
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     height: 2,
 
     borderRadius: "0px !important",
-    borderRight: "10px solid red",
+    border: "10px solid red",
   },
 }));
 

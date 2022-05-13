@@ -43,7 +43,7 @@ export default function CustomSelectBox() {
 
   return (
     <div>
-      <FormControl sx={{ width: 200 }}>
+      <FormControl sx={{ width: "250px" }}>
         <Select
           sx={{ height: 35 }}
           displayEmpty

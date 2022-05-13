@@ -240,7 +240,7 @@ h3 {
 
 @media screen and (min-width: 1366.1px) {
   .container {
-    width: 22%;
+    width: 300px;
     margin: 1%;
     padding: 1%;
   }
@@ -249,7 +249,7 @@ h3 {
 
 @media screen and (min-width: 1112px) {
   .container {
-    width: 22%;
+    width: 280px;
     margin: 1%;
     padding: 1%;
   }
@@ -269,7 +269,7 @@ h3 {
 
 @media screen and (max-width: 480px) {
   .container {
-    width: 90%;
+    width: 95%;
     margin: 1%;
     padding: 1%;
   }
