@@ -21,6 +21,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import ProductTags from "../../components/ProductTags";
 import SearchBoxForProducts from "../../components/SearchBoxForProducts";
+import PaginationOutlined from "../../components/Pagination";
 
 function CheckboxLabels(label) {
   return (
@@ -114,6 +115,9 @@ function Products() {
                 <ProductItem />
                 <ProductItem />
                 <ProductItem />
+              </Box>
+              <Box sx={{ m: 3 }} className={classes.pagination}>
+                <PaginationOutlined />
               </Box>
             </Grid>
           </Grid>

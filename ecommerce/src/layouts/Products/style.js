@@ -38,9 +38,6 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     width: "80%",
-    // [theme.breakpoints.down("lg")]: {
-    //   width: "50%",
-    // },
     [theme.breakpoints.down("lg")]: {
       width: "100%",
     },
@@ -55,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
   productItem: {
     width: "30% !important",
   },
+  pagination: { display: "flex", justifyContent: "center" },
 }));
 
 export default useStyles;
