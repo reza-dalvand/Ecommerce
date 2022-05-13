@@ -14,7 +14,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
   },
+  searchBoxProductsFilter: { width: "30px !important", color: "red" },
   iconsFilter: { display: "flex" },
+  tagFilters: { display: "flex", flexWrap: "wrap", width: "80%" },
 }));
 
 export default useStyles;
