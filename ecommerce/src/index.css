@@ -1,14 +1,13 @@
 @import url(./assets/fonts/import-iransans.css);
 
-
 body {
   margin: 0;
   font-family: IRANSans !important;
   direction: rtl;
   text-align: right;
+  background: #eeece9;
 }
 
-
 code {
-  font-family: IRANSans !important
+  font-family: IRANSans !important;
 }
