@@ -9,7 +9,9 @@ import HalfRating from "../../PlatForm/rating";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import ModalImage from "react-modal-image";
+import useStyles from "./style";
 const ProductItem = () => {
+  const classes = useStyles();
   const { useState } = React;
   const [addcart, setaddcart] = useState(1);
   const [heart, setheart] = useState(true);
@@ -39,9 +41,14 @@ const ProductItem = () => {
         <Box className="card">
           <i className="fa fa-long-arrow-left"></i>
           <Box className="image">
-            <ModalImage showRotate={true} small={headphone} medium={headphone} alt="نام محصول" />
+            <ModalImage
+              showRotate={true}
+              small={headphone}
+              medium={headphone}
+              alt="نام محصول"
+            />
           </Box>
-          <Box className="text">
+          <Box className={classes.text}>
             <Box className="positionHeart">
               <h5>تیشرت</h5>
               <Box className="heart">
