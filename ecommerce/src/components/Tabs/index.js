@@ -62,7 +62,30 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        Item One
+        <Box sx={{ mt: 1 }} style={{ display: "flex", alignItems: "center" }}>
+          <Typography sx={{ mr: 1 }} variant="h6">
+            وزن :
+          </Typography>
+          <Typography> 1.5 کیلوگرم </Typography>
+        </Box>
+        <Box sx={{ mt: 1 }} style={{ display: "flex", alignItems: "center" }}>
+          <Typography sx={{ mr: 1 }} variant="h6">
+            سایز :
+          </Typography>
+          <Typography> 10 * 10 *15 سانتیمتر </Typography>
+        </Box>
+        <Box sx={{ mt: 1 }} style={{ display: "flex", alignItems: "center" }}>
+          <Typography sx={{ mr: 1 }} variant="h6">
+            جنس :
+          </Typography>
+          <Typography>60% کتان 40٪ دیگر الیاف</Typography>
+        </Box>
+        <Box sx={{ mt: 1 }} style={{ display: "flex", alignItems: "center" }}>
+          <Typography sx={{ mr: 1 }} variant="h6">
+            توضیح :‌
+          </Typography>
+          <Typography>این کالا با مرغول ترین نوع پارچه ساته شده</Typography>
+        </Box>
       </TabPanel>
       <TabPanel style={{ padding: 5 }} value={value} index={1}>
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده

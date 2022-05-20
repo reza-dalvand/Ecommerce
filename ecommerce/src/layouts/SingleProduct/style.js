@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     borderRadius: 15,
+    [theme.breakpoints.up("md")]: {
+      padding: 7,
+    },
   },
   price: { display: "flex" },
   offPrice: { color: "#fe5252" },

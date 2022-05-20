@@ -79,7 +79,7 @@ function SingleProduct() {
       <MainNavbar />
       <BasicBreadcrumbs />
       <Grid container>
-        <Grid item xs={12}>
+        <Grid item xs={12} sm={6}>
           <Box>
             <Box className={classes.containerImage}>
               <Box className={classes.tagImage}>15% تخفیف</Box>
@@ -91,15 +91,13 @@ function SingleProduct() {
                 alt="عکس محصول"
               />
             </Box>
+            <Box>
+              <StandardImageList />
+            </Box>
           </Box>
         </Grid>
-        <Grid item xs={12}>
-          <Box>
-            <StandardImageList />
-          </Box>
-        </Grid>
-        <Grid item xs={12}>
-          <Box sx={{ ml: 1 }}>
+        <Grid item xs={12} sm={6}>
+          <Box sx={{ ml: 1, mt: 1 }}>
             <Typography variant="h4">نام محصول</Typography>
             <Box sx={{ mt: 1 }} className={classes.price}>
               <Typography className={classes.offPrice} variant="h5">
@@ -159,48 +157,55 @@ function SingleProduct() {
               </IconButton>
             </Box>
             <Box
-              sx={{ mr: 5 }}
               style={{
                 display: "flex",
                 justifyContent: "space-around",
                 width: "100%",
               }}
             >
-              <Link href="#">
-                <FacebookIcon />
-              </Link>
-              <Link href="#">
-                <WhatsAppIcon />
-              </Link>
-              <Link href="#">
-                <InstagramIcon />
-              </Link>
-              <Link href="#">
-                <TelegramIcon />
-              </Link>
-              <Link href="#">
-                <LinkedInIcon />
-              </Link>
+              <Box
+                sx={{ mt: 5 }}
+                style={{
+                  display: "flex",
+                  justifyContent: "space-around",
+                  width: "85%",
+                }}
+              >
+                <Link href="#">
+                  <FacebookIcon />
+                </Link>
+                <Link href="#">
+                  <WhatsAppIcon />
+                </Link>
+                <Link href="#">
+                  <InstagramIcon />
+                </Link>
+                <Link href="#">
+                  <TelegramIcon />
+                </Link>
+                <Link href="#">
+                  <LinkedInIcon />
+                </Link>
+              </Box>
             </Box>
           </Box>
-          <Box>
+        </Grid>
+        <Grid item xs={12}>
+          <Box marginTop={4}>
             <BasicTabs />
+            <Divider sx={{ my: 3 }} />
           </Box>
         </Grid>
-        {/* <Grid item xs={4}>
-          <Item>xs=4</Item>
-        </Grid>
-        <Grid item xs={8}>
-          <Item>xs=8</Item>
-        </Grid> */}
       </Grid>
+
       <Typography
+        sx={{ mt: 3 }}
         style={{ display: "flex", justifyContent: "center" }}
         variant="h5"
       >
         محصولات مرتبط
       </Typography>
-      <Box sx={{ m: 1 }} className={classes.slickCarousel}>
+      <Box sx={{ m: 1, mt: 3, mb: 4 }} className={classes.slickCarousel}>
         <Slider {...settings}>
           <Box>
             <Box
