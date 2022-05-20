@@ -48,10 +48,13 @@ import { CirclePicker } from "react-color";
 
 export default function ColorPicker() {
   const colors = ["#F47373", "#697689", "#37D67A", "#2CCCE4", "#555555"];
-  const onChangeHandler = (color, event) => {
-    console.log(color, event);
-  };
+  const onChangeHandler = (color, event) => {};
   return (
-    <CirclePicker circleSpacing={10} circleSize={20} colors={colors} onChange={onChangeHandler} />
+    <CirclePicker
+      circleSpacing={10}
+      circleSize={20}
+      colors={colors}
+      onChange={onChangeHandler}
+    />
   );
 }

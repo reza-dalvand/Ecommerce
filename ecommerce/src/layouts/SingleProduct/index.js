@@ -22,11 +22,56 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Link from "@mui/material/Link";
+import BasicTabs from "../../components/Tabs";
+import head2 from "../../assets/images/head2.jpg";
+import head3 from "../../assets/images/head3.jpg";
+import head8 from "../../assets/images/head8.jpg";
+import head5 from "../../assets/images/head5.jpg";
+import head6 from "../../assets/images/head6.jpg";
+import head7 from "../../assets/images/head7.jpg";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 function SingleProduct() {
   const classes = useStyle();
   const [heart, setHeart] = useState(false);
   const heartHandler = () => {
     setHeart(!heart);
+  };
+  const settings = {
+    // className: "center",
+    centerMode: true,
+    infinite: true,
+    slidesToScroll: 3,
+    centerPadding: "60px",
+    slidesToShow: 4,
+    speed: 500,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -70,7 +115,7 @@ function SingleProduct() {
             </Box>
             <Box sx={{ mt: 2 }}>
               <HalfRating />
-              <Typography sx={{ mt: 2 }}>
+              <Typography padding={1} sx={{ mt: 2 }}>
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
                 استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله
                 در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
@@ -80,7 +125,7 @@ function SingleProduct() {
             </Box>
             <Divider sx={{ my: 3 }} />
             <Box>
-              <Typography>انتخاب رنگ</Typography>
+              <Typography sx={{ mb: 1 }}>انتخاب رنگ</Typography>
               <ColorPicker />
             </Box>
             <Box
@@ -138,6 +183,9 @@ function SingleProduct() {
               </Link>
             </Box>
           </Box>
+          <Box>
+            <BasicTabs />
+          </Box>
         </Grid>
         {/* <Grid item xs={4}>
           <Item>xs=4</Item>
@@ -146,7 +194,82 @@ function SingleProduct() {
           <Item>xs=8</Item>
         </Grid> */}
       </Grid>
-
+      <Typography
+        style={{ display: "flex", justifyContent: "center" }}
+        variant="h5"
+      >
+        محصولات مرتبط
+      </Typography>
+      <Box sx={{ m: 1 }} className={classes.slickCarousel}>
+        <Slider {...settings}>
+          <Box>
+            <Box
+              component="img"
+              sx={{
+                height: 250,
+                width: 250,
+              }}
+              alt="head2"
+              src={head2}
+            />
+          </Box>
+          <Box>
+            <Box
+              component="img"
+              sx={{
+                height: 250,
+                width: 250,
+              }}
+              alt="head2"
+              src={head3}
+            />
+          </Box>
+          <Box>
+            <Box
+              component="img"
+              sx={{
+                height: 250,
+                width: 250,
+              }}
+              alt="head2"
+              src={head5}
+            />
+          </Box>
+          <Box>
+            <Box
+              component="img"
+              sx={{
+                height: 250,
+                width: 250,
+              }}
+              alt="head2"
+              src={head6}
+            />
+          </Box>
+          <Box>
+            <Box
+              component="img"
+              sx={{
+                height: 250,
+                width: 250,
+              }}
+              alt="head2"
+              src={head7}
+            />
+          </Box>
+          <Box>
+            <Box
+              component="img"
+              sx={{
+                height: 250,
+                width: 250,
+              }}
+              alt="head2"
+              src={head8}
+            />
+          </Box>
+        </Slider>
+      </Box>
       <MainFooter />
     </Box>
   );
