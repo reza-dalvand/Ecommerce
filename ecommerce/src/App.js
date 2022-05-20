@@ -4,6 +4,7 @@ import Home from "./layouts/Home";
 import Blog from "./layouts/Blog";
 import SingleProduct from "./layouts/SingleProduct";
 import Products from "./layouts/Products";
+import SingleBlog from "./layouts/SingleBlog";
 function App() {
   return (
     <Router>
@@ -17,7 +18,10 @@ function App() {
         <Route exact path="/products/:id" element={<SingleProduct />} />
       </Routes>
       <Routes>
-        <Route exact path="/Blog" element={<Blog />} />
+        <Route exact path="/Blogs" element={<Blog />} />
+      </Routes>
+      <Routes>
+        <Route exact path="/blogs/:id" element={<SingleBlog />} />
       </Routes>
     </Router>
   );

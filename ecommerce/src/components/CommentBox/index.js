@@ -22,11 +22,9 @@ export default function CommentBox() {
   const classes = useStyles();
   return (
     <Box style={{ padding: 14 }} className="App">
-      <Typography component={"h4"} sx={{ mb: 1 }}>
-        نظرات
-      </Typography>
+      <Typography variant={"h4"}>نظرات</Typography>
       <Grid>
-        <Box className={classes.mainContainer}>
+        <Box sx={{ mt: 3 }} className={classes.mainContainer}>
           <Grid item xs={12} md={5}>
             <Box>
               <Paper style={{ padding: "40px 20px" }}>
