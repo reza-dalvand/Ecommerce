@@ -5,6 +5,7 @@ import Blog from "./layouts/Blog";
 import SingleProduct from "./layouts/SingleProduct";
 import Products from "./layouts/Products";
 import SingleBlog from "./layouts/SingleBlog";
+import ContactUs from "./layouts/ContactUs";
 function App() {
   return (
     <Router>
@@ -22,6 +23,9 @@ function App() {
       </Routes>
       <Routes>
         <Route exact path="/blogs/:id" element={<SingleBlog />} />
+      </Routes>
+      <Routes>
+        <Route exact path="/contact" element={<ContactUs />} />
       </Routes>
     </Router>
   );
