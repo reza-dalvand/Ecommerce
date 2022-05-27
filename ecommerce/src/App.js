@@ -6,6 +6,7 @@ import SingleProduct from "./layouts/SingleProduct";
 import Products from "./layouts/Products";
 import SingleBlog from "./layouts/SingleBlog";
 import ContactUs from "./layouts/ContactUs";
+import LoginAndRegister from "./layouts/Login/Register";
 function App() {
   return (
     <Router>
@@ -26,6 +27,9 @@ function App() {
       </Routes>
       <Routes>
         <Route exact path="/contact" element={<ContactUs />} />
+      </Routes>
+      <Routes>
+        <Route exact path="/login" element={<LoginAndRegister />} />
       </Routes>
     </Router>
   );
