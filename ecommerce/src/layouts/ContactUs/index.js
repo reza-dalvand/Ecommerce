@@ -14,7 +14,7 @@ import {
 import useStyle from "./style";
 import MainFooter from "../../components/MainFooter";
 import BasicBreadcrumbs from "../../components/Breadcrumbs";
-import Map from "../../components/googleMap";
+import NeshanMap from "../../components/NeshanMap";
 import PublicIcon from "@mui/icons-material/Public";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -28,6 +28,9 @@ function ContactUs() {
     <Box>
       <MainNavbar />
       <BasicBreadcrumbs />
+      <Box className={classes.map}>
+        <NeshanMap />
+      </Box>
       <Box sx={{ padding: 1 }}>
         <Grid className={classes.MainBox} container spacing={2}>
           <Grid item xs={12} sm={4}>
@@ -52,7 +55,7 @@ function ContactUs() {
                   <Box className={classes.circleIconInfo}>
                     <PublicIcon />
                   </Box>
-                  <Box width='75%'>
+                  <Box width="75%">
                     <Link
                       className={classes.emailLink}
                       underline="none"

@@ -8,6 +8,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
   },
+  map: {
+    display: "flex",
+    justifyContent: "center",
+    width: "100%",
+  },
   infoMain: {
     backgroundColor: "#dbd5d5",
     display: "flex",
