@@ -2,7 +2,7 @@ import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
   mainBox: {
-    width: "310px",
+    width: "285px",
     height: "520px",
     background: "#dfd7d7",
     padding: "15px",
