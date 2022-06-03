@@ -7,6 +7,7 @@ import Products from "./layouts/Products";
 import SingleBlog from "./layouts/SingleBlog";
 import ContactUs from "./layouts/ContactUs";
 import LoginAndRegister from "./layouts/Login/Register";
+import AboutUs from "./layouts/AboutUS";
 function App() {
   return (
     <Router>
@@ -31,6 +32,12 @@ function App() {
       <Routes>
         <Route exact path="/login" element={<LoginAndRegister />} />
       </Routes>
+      <Routes>
+        <Route exact path="/about" element={<AboutUs />} />
+      </Routes>
+      {/* <Routes>
+        <Route exact path="/card" element={<Card />} />
+      </Routes> */}
     </Router>
   );
 }

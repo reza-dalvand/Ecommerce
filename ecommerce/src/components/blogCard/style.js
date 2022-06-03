@@ -9,7 +9,6 @@ const useStyles = makeStyles((theme) => ({
     width: "45%",
     marginBlock: "2rem",
     gap: "2rem",
-    [theme.breakpoints.down("md")]: {},
   },
   img: {
     maxWidth: "100%",
