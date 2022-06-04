@@ -85,7 +85,6 @@ function Cart() {
               color="secondary"
               className={classes.ButtonsClearAndContinueItem}
               variant="contained"
-              borderRadius="10%"
             >
               فرم پرداخت
             </Button>

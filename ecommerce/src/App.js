@@ -9,6 +9,7 @@ import ContactUs from "./layouts/ContactUs";
 import LoginAndRegister from "./layouts/Login/Register";
 import AboutUs from "./layouts/AboutUS";
 import Cart from "./layouts/Cart";
+import NotFound from "./layouts/NotFound";
 function App() {
   return (
     <Router>
@@ -38,6 +39,9 @@ function App() {
       </Routes>
       <Routes>
         <Route exact path="/cart" element={<Cart />} />
+      </Routes>
+      <Routes>
+        <Route exact path="/not" element={<NotFound />} />
       </Routes>
     </Router>
   );
