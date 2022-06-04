@@ -86,7 +86,7 @@ function Cart() {
               className={classes.ButtonsClearAndContinueItem}
               variant="contained"
             >
-              فرم پرداخت
+              ادامه پرداخت
             </Button>
           </Box>
         </Grid>
