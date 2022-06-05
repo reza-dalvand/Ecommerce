@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   productsMenu: {
     display: "flex",
     flexWrap: "wrap",
-    backgroundColor: "#464444",
+    backgroundColor: "#f4f4f3",
     justifyContent: "center",
     width: "100% !important",
   },

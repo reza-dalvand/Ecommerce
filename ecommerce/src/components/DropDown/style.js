@@ -6,8 +6,7 @@ const useStyles = makeStyles({
     boxShadow: "none !important",
     color: "#000 !important",
     fontSize: "21px !important",
-    // fontWeight: "bold !important",
-    marginTop: "5px !important",
+    marginTop: "2px !important",
   },
   productMenuNavbar: { display: "flex" },
 });

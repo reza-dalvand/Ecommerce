@@ -159,26 +159,39 @@ export default function MainNavbar() {
           />
           <Box sx={{ flexGrow: 1 }} className={classes.navbarLink}>
             <Link
-              to="#"
+              to="/"
               underline="none"
               className={classes.removeUnderLineLink}
             >
               خانه
             </Link>
-            <DropDownNavbar title={"محصولات"} />
             <Link
-              to="#"
+              to="/products"
+              underline="none"
+              className={classes.removeUnderLineLink}
+            >
+              <DropDownNavbar title={"محصولات"} />
+            </Link>
+            <Link
+              to="/blogs"
               underline="none"
               className={classes.removeUnderLineLink}
             >
               وبلاگ
             </Link>
             <Link
-              to="#"
+              to="/contact"
               underline="none"
               className={classes.removeUnderLineLink}
             >
               تماس با ما
+            </Link>
+            <Link
+              to="/about"
+              underline="none"
+              className={classes.removeUnderLineLink}
+            >
+              درباره ما
             </Link>
           </Box>
           <Box className={classes.boxBadgeIconSearch}>

@@ -22,7 +22,7 @@ import Checkbox from "@mui/material/Checkbox";
 import ProductTags from "../../components/ProductTags";
 import SearchBoxForProducts from "../../components/SearchBoxForProducts";
 import PaginationOutlined from "../../components/Pagination";
-
+import VerticalToggleButtons from "../../components/ToggleButtons";
 function CheckboxLabels(label) {
   return (
     <FormGroup>
@@ -91,14 +91,15 @@ function Products() {
           </Grid>
           <Grid style={{ width: "100%" }} item xs={12} lg={9}>
             <Box sx={{ mt: 2 }} className={classes.leftNavbarFilters}>
-              <Box className={classes.iconsFilter}>
+              {/* <Box className={classes.iconsFilter}>
                 <IconButton aria-label="upload picture" component="span">
                   <ViewComfyIcon />
                 </IconButton>
                 <IconButton aria-label="upload picture" component="span">
                   <ViewListIcon />
                 </IconButton>
-              </Box>
+              </Box> */}
+              <VerticalToggleButtons />
               <Typography className={classes.iconFilter}>
                 نمایش 15 از 144 کالا
               </Typography>
