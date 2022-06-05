@@ -11,6 +11,7 @@ import AboutUs from "./layouts/AboutUS";
 import Cart from "./layouts/Cart";
 import NotFound from "./layouts/NotFound";
 import CheckOut from "./layouts/CheckOut";
+import MyAccount from "./layouts/MyAccount";
 function App() {
   return (
     <Router>
@@ -34,6 +35,9 @@ function App() {
       </Routes>
       <Routes>
         <Route exact path="/login" element={<LoginAndRegister />} />
+      </Routes>
+      <Routes>
+        <Route exact path="/login/:id" element={<MyAccount />} />
       </Routes>
       <Routes>
         <Route exact path="/about" element={<AboutUs />} />
